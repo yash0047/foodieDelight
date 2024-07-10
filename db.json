@@ -1,0 +1,11 @@
+{
+  "restaurants": [
+    {
+      "name": "Pizza zone",
+      "location": "Rajkot",
+      "contactInfo": "yash@gamil.com",
+      "description": "Pizza - Garlic Bread",
+      "id": "caea"
+    }
+  ]
+}

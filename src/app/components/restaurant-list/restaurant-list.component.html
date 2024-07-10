@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-restaurants-center mb-3">
+    <h1>Restaurants</h1>
+    <a routerLink="/add-restaurant" class="btn btn-success">Add Restaurant</a>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col" class="col">Name</th>
+        <th scope="col" class="col-2">Location</th>
+        <th scope="col" class="col">Contact Info</th>
+        <th scope="col" class="col-4">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of restaurants; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.location }}</td>
+        <td>{{ item.contactInfo }}</td>
+        <td>{{ item.description ? item.description : '-' }}</td>
+        <td>
+          <a routerLink="/edit-restaurant/{{ item.id }}" class="btn btn-primary btn-sm me-2">Edit</a>
+          <button (click)="deleteRestaurant(item.id)" class="btn btn-danger btn-sm">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
